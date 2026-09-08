@@ -35,7 +35,9 @@ body {
             object-fit: cover;
             z-index: -1;
         }
-
+       #bg-video:loadedmetadata {
+            opacity: 1;
+        }
         .content {
     position: relative;
     z-index: 1;
@@ -197,7 +199,7 @@ body {
 
 <body>
 
-    <video autoplay muted loop playsinline id="bg-video">
+    <video autoplay muted loop playsinline id="bg-video" poster="{{ url_for('static', filename='background.jpg') }}">
         <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
         
         Your browser does not support the video tag.
@@ -308,6 +310,10 @@ I build systems that are reliable, scalable, and genuinely intelligent — not j
             status.textContent = 'Network error. Please try again.';
             status.className = 'status show fail';
         });
+    });
+        const bgVideo = document.getElementById('bg-video');
+        bgVideo.addEventListener('canplaythrough', function () {
+        bgVideo.classList.add('loaded');
     });
     
 </script>
