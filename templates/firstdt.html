@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>First Template</title>
+
+    <style>
+      * {
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100dvh;
+
+
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+    position: relative;
+    z-index: 1;
+
+    color: rgb(221, 241, 130);
+    text-align: center;
+    padding: 100px 20px 40px;
+   }
+
+.sumary {
+    position: relative;
+    z-index: 1;
+    color: #D1D5DB;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.contact-block {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 600px;
+    margin: 60px auto 100px;
+    font-family: sans-serif;
+    color: #D1D5DB;
+}
+
+.contact-block h2 {
+    color: rgb(221, 241, 130);
+    margin-bottom: 8px;
+}
+
+.contact-block p.lead {
+    margin-bottom: 32px;
+    line-height: 1.5;
+    color: #D1D5DB;
+}
+
+.contact-block .field {
+    margin-bottom: 8px;
+}
+
+.contact-block label {
+    display: block;
+    font-size: 10px;
+    margin-bottom: 6px;
+    color: #9CA3AF;
+}
+
+.contact-block input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 2px;
+    font-size: 16px;
+    color: #fff;
+    outline: none;
+}
+
+.contact-block input:focus {
+    border-bottom: 1.5px solid rgb(221, 241, 130);
+}
+
+.contact-block small.error {
+    display: none;
+    color: #f87171;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.contact-block .field.invalid input {
+    border-bottom-color: #f87171;
+}
+
+.contact-block .field.invalid small.error {
+    display: block;
+}
+
+.contact-block button {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 8px;
+    background: rgb(221, 241, 130);
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-block button:hover {
+    opacity: 0.85;
+}
+
+.contact-block .status {
+    margin-top: 16px;
+    font-size: 14px;
+    display: none;
+}
+
+.proj {
+    position: relative;
+    background:transparent;
+    color: #f0b240;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.socialmeadia {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.instagram {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 50px;
+
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285AEB 90%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.linkedin {
+     display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: 50px;
+    color: #0A66C2;
+    margin-left: 20px;
+}
+
+.contact-block .status.show { display: block; }
+.contact-block .status.success { color: rgb(221, 241, 130); }
+.contact-block .status.fail { color: #f87171; }
+
+   
+    </style>
+
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+        
+        Your browser does not support the video tag.
+    </video>
+    
+
+    <div class="content">
+        <h1>Somay Saini - Building AI systems that actually are ultimate</h1>
+        <h2> I build AI that reasons,not just responds</h2>
+    </div>
+
+    <div class="sumary">
+        <h3>A self-taught AI/ML engineer with a strong grip on both the fundamentals and the frontier.
+I go beyond calling APIs — understanding model internals, building RAG pipelines, and architecting multi-agent systems that reason and act autonomously. My approach combines classical ML foundations with modern GenAI engineering, so I can debug a model's behavior as easily as I can orchestrate a production-grade agentic pipeline.
+I build systems that are reliable, scalable, and genuinely intelligent — not just impressive demos.</h3>
+    </div>
+
+     <!-- 
+    icons for skills section
+     
+     <div class="SKILLS">
+        <h2 style="padding: 10px; position: relative;">Skills</h2>
+        <i class="devicon-python-original-wordmark colored" style="font-size: 50px;"></i>
+        <i class="devicon-flask-original-wordmark colored" style="font-size: 50px;"></i>
+        <i class="devicon-nodejs-plain-wordmark colored" style="font-size: 50px;"></i>
+        <i class="devicon-postgresql-plain-wordmark colored" style="font-size: 50px;"></i>
+        <i class="devicon-numpy-plain-wordmark colored" style="font-size: 50px;"></i>
+        <i class="devicon-fastapi-plain-wordmark colored" style="font-size: 50px;"></i>
+    </div>
+    -->
+    
+    
+
+
+        <div class="contact-block">
+    <h2>Get in touch</h2>
+    <p class="lead">Send over your details and I'll get back to you shortly.</p>
+
+    <form id="contactForm" novalidate action="https://formspree.io/f/mjyvppgk" method="POST">
+        <div class="field" id="nameField">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <small class="error">Please enter your name.</small>
+        </div>
+
+        <div class="field" id="emailField">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <small class="error">Please enter a valid email address.</small>
+        </div>
+
+        <div class="field" id="phoneField">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+91 98765 43210" required>
+            <small class="error">Please enter a valid phone number.</small>
+        </div>
+
+        <button type="submit">Send message</button>
+        <p class="status" id="status"></p>
+    </form>
+</div>
+
+
+<script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('status');
+
+    const fields = {
+        name: { el: document.getElementById('nameField'), test: v => v.trim().length > 1 },
+        email: { el: document.getElementById('emailField'), test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+        phone: { el: document.getElementById('phoneField'), test: v => /^[+\d][\d\s-]{7,}$/.test(v.trim()) }
+    };
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        let valid = true;
+
+        for (const key in fields) {
+            const input = document.getElementById(key);
+            const ok = fields[key].test(input.value);
+            fields[key].el.classList.toggle('invalid', !ok);
+            if (!ok) valid = false;
+        }
+
+        if (!valid) {
+            status.textContent = 'Please fix the highlighted fields.';
+            status.className = 'status show fail';
+            return;
+        }
+
+        // Formspree ko data bhejo
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                status.textContent = "Thanks! I'll get back to you shortly.";
+                status.className = 'status show success';
+                form.reset();
+            } else {
+                status.textContent = 'Something went wrong. Please try again.';
+                status.className = 'status show fail';
+            }
+        })
+        .catch(() => {
+            status.textContent = 'Network error. Please try again.';
+            status.className = 'status show fail';
+        });
+    });
+    
+</script>
+ <div class="proj">
+    <h3>
+         <a href="/projects" style="color: rgb(231, 132, 51); text-decoration: none;">see work and projects </a>
+    </h3>
+</div>
+<div class="socialmeadia">
+    <h3 style="color: rgb(231, 132, 51); text-decoration: none;">
+         connect with me 
+         </h3>
+         <a href="https://www.instagram.com/somaysainiii/" target="_blank">
+        <i class="fa-brands fa-instagram instagram"></i></a>
+        <a href="https://www.linkedin.com/in/somay-saini-209032305/" target="_blank">
+        <i class="fa-brands fa-linkedin linkedin"></i>
+        </a>
+
+</div>
+
+</body>
+</html>

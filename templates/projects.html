@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Somay Saini | Projects</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html, body {
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-y: auto;
+            background: #000;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100dvh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        
+
+        .home-link {
+            position: relative;
+            z-index: 1;
+            display: block;
+            width: fit-content;
+            margin: 24px auto 0 24px;
+            color: #D1D5DB;
+            font-family: sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .home-link:hover {
+            color: rgb(221, 241, 130);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: rgb(221, 241, 130);
+            text-align: center;
+            padding: 40px 20px 20px;
+            font-family: sans-serif;
+        }
+
+        .content h1 {
+            font-size: 36px;
+        }
+
+        .content p.tagline {
+            color: #D1D5DB;
+            max-width: 600px;
+            margin: 16px auto 0;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .projects-list {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto 20px;
+            font-family: sans-serif;
+        }
+
+        .project {
+            padding: 36px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project h2 {
+            color: rgb(221, 241, 130);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #D1D5DB;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        .project p:first-of-type {
+            margin-top: 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 16px;
+            color: rgb(231, 132, 51);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            opacity: 0.8;
+        }
+
+        .stack-section {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto 80px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .stack-section h2 {
+            color: rgb(221, 241, 130);
+            font-size: 24px;
+        }
+
+        .stack-section p.stack-lead {
+            color: #D1D5DB;
+            margin: 10px auto 32px;
+            max-width: 480px;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .stack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px 28px;
+        }
+
+        .stack-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 76px;
+        }
+
+        .stack-item i {
+            font-size: 34px;
+        }
+
+        .stack-item i.fa-solid {
+            color: rgb(221, 241, 130);
+        }
+
+        .stack-item span {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #D1D5DB;
+        }
+
+        .socialmeadia {
+            position: relative;
+            z-index: 1;
+            text-align: left;
+            margin: 0 24px 50px;
+        }
+
+        .socialmeadia h3 {
+            color: rgb(231, 132, 51);
+            font-family: sans-serif;
+            margin-bottom: 12px;
+        }
+
+        .instagram {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+            font-size: 40px;
+            background: radial-gradient(
+                circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285AEB 90%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .linkedin {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+            font-size: 40px;
+            color: #0A66C2;
+            margin-left: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .content h1 { font-size: 28px; }
+            .content p.tagline { font-size: 14px; }
+            .project h2 { font-size: 20px; }
+            .project p { font-size: 14px; }
+            .stack-item { width: 64px; }
+            .stack-item i { font-size: 28px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="bg-video" src="{{ url_for('static', filename='Background.jpg') }}" alt="">
+    <a href="/" class="home-link">&larr; Home</a>
+
+    <div class="content">
+        <h1>Projects</h1>
+        <p class="tagline">Systems I've designed, built, and shipped — multi-agent platforms, RAG pipelines, and the backends that hold them together.</p>
+    </div>
+
+    <div class="projects-list">
+
+        <div class="project">
+            <h2>CampusOS</h2>
+            <p>What started as a hackathon build turned into a full multi-agent campus management platform. I own the entire backend — nine AI agents orchestrated through FastAPI and LangChain's AgentExecutor, each handling a distinct slice of campus operations rather than one monolithic model trying to do everything.</p>
+            <p>Redis and Celery handle the async task queue so agent work doesn't block the API, MinIO gives S3-compatible storage for the files agents generate and retrieve, and Ollama serves the LLMs locally instead of routing every call through a paid API. The whole stack runs on Docker Compose, with a React 18 + TypeScript frontend a teammate built on top of it.</p>
+            <!-- TODO: replace with your real CampusOS repo link -->
+            <a href="#" class="project-link">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h2>Agentic Content OS</h2>
+            <p>A RAG pipeline built around agentic workflows instead of a single prompt-response loop. Retrieval and generation aren't one call — they're steps an agent decides to take, so the pipeline can re-query, re-rank, or branch depending on what the first pass turns up, instead of returning whatever the first retrieval happened to find.</p>
+            <a href="https://github.com/somaysaini/agentic-content-os" class="project-link" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h2>Agent Discovery Platform</h2>
+            <p>Built for a take-home technical assessment: a FastAPI-based platform for discovering and matching AI agents to tasks — the kind of routing layer a marketplace or orchestration system needs so a job lands with the right agent instead of a hardcoded one.</p>
+            <!-- TODO: add a repo/demo link if you want this one public -->
+        </div>
+
+    </div>
+
+    <div class="stack-section">
+        <h2>Stack</h2>
+        <p class="stack-lead">What I actually build with, day to day.</p>
+        <div class="stack-grid">
+            <div class="stack-item">
+                <i class="devicon-python-plain-wordmark colored"></i>
+                <span>Python</span>
+            </div>
+            <div class="stack-item">
+                <i class="devicon-fastapi-plain-wordmark colored"></i>
+                <span>FastAPI</span>
+            </div>
+            <div class="stack-item">
+                <i class="devicon-flask-original-wordmark colored"></i>
+                <span>Flask</span>
+            </div>
+            <div class="stack-item">
+                <i class="devicon-postgresql-plain-wordmark colored"></i>
+                <span>PostgreSQL</span>
+            </div>
+            <div class="stack-item">
+                <i class="devicon-numpy-original-wordmark colored"></i>
+                <span>NumPy</span>
+            </div>
+            <div class="stack-item">
+                <i class="devicon-pandas-original-wordmark colored"></i>
+                <span>Pandas</span>
+            </div>
+            <div class="stack-item">
+                <i class="fa-solid fa-brain"></i>
+                <span>Machine Learning</span>
+            </div>
+            <div class="stack-item">
+                <i class="fa-solid fa-link"></i>
+                <span>LangChain</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="socialmeadia">
+        <h3>connect with me</h3>
+        <a href="https://www.instagram.com/somaysainiii/" target="_blank">
+            <i class="fa-brands fa-instagram instagram"></i></a>
+        <a href="https://www.linkedin.com/in/somay-saini-209032305/" target="_blank">
+            <i class="fa-brands fa-linkedin linkedin"></i>
+        </a>
+    </div>
+
+</body>
+</html>
